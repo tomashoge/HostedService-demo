@@ -3,10 +3,6 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace HostedService_demo
 {
@@ -16,8 +12,7 @@ namespace HostedService_demo
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddSingleton<HostedService>();
-            services.AddHostedService<HostedService>();
+            services.AddHostedService<ExampleHostedService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
