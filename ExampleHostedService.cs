@@ -23,12 +23,12 @@ namespace HostedService_demo
 
         public async Task StartAsync(CancellationToken cancellationToken)
         {
-            _logger.LogInformation("Hosted Service is stopping.");
+            _logger.LogInformation($"{nameof(ExampleHostedService)}: Hosted Service is starting.");
         }
 
         public async Task StopAsync(CancellationToken cancellationToken)
         {
-            _logger.LogInformation("Hosted Service is stopping.");
+            _logger.LogInformation($"{nameof(ExampleHostedService)}: Hosted Service is stopping.");
         }
     }
 }
